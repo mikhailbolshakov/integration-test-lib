@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "module": {
+            "type": "string",
+            "description": "path to js file"
+        },
+        "function": {
+            "type": "string",
+            "description": "valid name of function in js file specified in jsFilePath"
+        }
+    }
+}

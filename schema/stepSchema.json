@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "code",
+        "actor",
+        "description",
+        "executor"        
+    ],
+    "properties": {
+        "code": {
+            "type": "string",
+            "description": "Scenario code"
+        },
+        "description": {
+            "type": "string",
+            "description": "Scenario description"
+        },
+        "actor": {
+            "type": "string",
+            "description": "actor code with which step is executed"
+        },
+        "requests": {
+            "type": "array",
+            "description": "list of step requests",
+            "items": {
+                "description": "step request", 
+                "$ref": "./requestSchema.json#"
+            }
+        },
+        "executor": {
+            "$ref": "./functionSchema.json#",
+            "description": "executor function"
+        },
+        "assert": {
+            "$ref": "./assertSchema.json#",
+            "description": "assertion"
+        },
+        "skip": {
+            "type": "boolean",
+            "description": "if true step is skipped"
+        },
+        "identityExpression": {
+            "type": "string",
+            "description": "allows to specify JSON path expr to retrieve some identity value from the context to show it in the report"
+        }
+    }
+}

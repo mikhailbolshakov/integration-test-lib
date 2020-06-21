@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "expected": {
+            "type": "string",
+            "description": "path to json containing expected data"
+        },
+        "module": {
+            "type": "string",
+            "description": "path to js file"
+        },
+        "function": {
+            "type": "string",
+            "description": "valid name of function in js file specified in jsFilePath"
+        }
+    }
+}
